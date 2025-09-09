@@ -8,10 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.List;
-
-import static java.util.Collections.emptyList;
-
 @Controller
 @RequestMapping(path = "/api")
 public class MainController {
@@ -21,5 +17,10 @@ public class MainController {
     @GetMapping(path="/backlog")
     public ResponseEntity<Iterable<Backlog>> findAllBacklogs() {
         return ResponseEntity.ok(backlogRepository.findAll());
+    }
+
+    @GetMapping(path="/about")
+    public ResponseEntity<String> aboutInfo() {
+        return ResponseEntity.ok("Api is up");
     }
 }
