@@ -56,3 +56,6 @@ jobs:
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
+
+    - name: Trigger Render via Deploy Hook
+      run: curl "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
