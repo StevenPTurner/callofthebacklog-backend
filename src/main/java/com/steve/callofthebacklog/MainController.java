@@ -23,4 +23,9 @@ public class MainController {
     public ResponseEntity<String> aboutInfo() {
         return ResponseEntity.ok("Api is up");
     }
+
+    @GetMapping(path="/steven")
+    public ResponseEntity<String> aboutInfo() {
+        return ResponseEntity.ok("I am the best");
+    }
 }
