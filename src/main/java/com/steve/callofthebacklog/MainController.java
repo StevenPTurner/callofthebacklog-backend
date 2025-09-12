@@ -25,7 +25,7 @@ public class MainController {
     }
 
     @GetMapping(path="/steven")
-    public ResponseEntity<String> aboutInfo() {
+    public ResponseEntity<String> steven() {
         return ResponseEntity.ok("I am the best");
     }
 }
