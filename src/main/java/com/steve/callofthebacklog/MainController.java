@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -29,6 +28,6 @@ public class MainController {
 
     @GetMapping(path = "/about")
     public ResponseEntity<String> aboutInfo() {
-        return ResponseEntity.ok("Api is up");
+        return ResponseEntity.ok("API is awake");
     }
 }
