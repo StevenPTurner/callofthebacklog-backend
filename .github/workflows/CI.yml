@@ -35,6 +35,14 @@ jobs:
     - name: Build
       run: ./gradlew build
 
+    - name: Test Report
+      if: ${{ !cancelled() }}       # run this step even if previous step failed
+      uses: dorny/test-reporter@v2
+      with:
+        name: JUnit Tests
+        path: build/test-results/test/*.xml
+        reporter: java-junit
+
     - name: Log in to the Container registry
       uses: docker/login-action@v3
       with:
