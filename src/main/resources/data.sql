@@ -1,9 +1,17 @@
-INSERT INTO backlog (id, type)
+INSERT INTO media_type (id, name)
 VALUES
     (1, 'Movie'),
     (2, 'Game'),
     (3, 'Book'),
     (4, 'Anime');
+
+INSERT INTO backlog (id, media_type_id)
+VALUES
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4);
+
 
 INSERT INTO media (backlog_id, title) VALUES
     -- Movies

@@ -1,6 +1,7 @@
-package com.steve.callofthebacklog.backlog;
+package com.steve.callofthebacklog.media;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.steve.callofthebacklog.backlog.Backlog;
 import jakarta.persistence.*;
 import lombok.Data;
 

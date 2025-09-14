@@ -1,6 +1,8 @@
 package com.steve.callofthebacklog.backlog;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.steve.callofthebacklog.media.Media;
+import com.steve.callofthebacklog.media.MediaType;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -13,7 +15,9 @@ public class Backlog {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String type;
+    @OneToOne
+    @JoinColumn(name = "media_type_id")
+    private MediaType type;
 
     @JsonManagedReference
     @OneToMany(mappedBy = "backlog", cascade = CascadeType.ALL)

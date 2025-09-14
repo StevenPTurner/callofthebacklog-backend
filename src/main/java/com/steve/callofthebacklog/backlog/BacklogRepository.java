@@ -1,6 +1,6 @@
 package com.steve.callofthebacklog.backlog;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.ListCrudRepository;
 
-public interface BacklogRepository extends CrudRepository<Backlog, Integer> {
+public interface BacklogRepository extends ListCrudRepository<Backlog, Integer> {
 }
